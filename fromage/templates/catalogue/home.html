@@ -1,0 +1,35 @@
+{% load static %}
+ 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fromage</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body>
+    <h1>Welcome to Fromage</h1>
+    <form action="{% url 'home' %}" method = "get">
+      <input type ="text" name ="query" placeholder = "Name"/>
+      <select name="strength">
+        <option disabled selected>Select strength</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      <select name = "country">
+        <option disabled selected>Select country</option>
+        <option value = "france">France</option>
+        <option value = "spain">Spain</option>
+      </select>
+      <button type="submit"> Search cheeses</button>
+    </form>
+    <section class="container">
+      {% include  'partials/_cheese_list.html' with cheeses=cheeses %}
+    </section>  
+  </body>
+</html>

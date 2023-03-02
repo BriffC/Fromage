@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+   
+  /* <ul></ul> */
+  .cheeses {
+    display: flex;
+    gap: 10px;
+  }
+   
+  /* <li></li> */
+  .cheese-item {
+    width: 25%;
+    list-style-type: none;
+    background-color: #fed053;
+    color: #1e2138;
+    border-radius: 20px;
+    transition: 0.2s background-color ease;
+   
+  }
+
+  .cheese-item:hover{
+    background-color: #f95700;
+    color: white;
+    cursor: pointer;
+
+  }
+   
+  /* <img /> */
+  .cheese-item__image {
+    width: 100%;
+    display: block;
+    height:200px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    transition: 0.2s transform ease;
+  }
+
+  .cheese-item__content{
+    padding:15%
+  }
+
+  .cheese-item__description{
+    font-weight: normal;
+  }
+
+  .cheese-item__link {
+    color: #1e2138;
+    text-decoration: none;
+    transition: 0.2s color ease;
+  }
+
+  .cheese-item:hover {
+    background-color: #f95700;
+  }
+
+  .cheese-item__link:hover {
+    color: white;
+  }
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+}
